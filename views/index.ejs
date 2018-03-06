@@ -22,7 +22,19 @@
 	</style>
 </head>
 <body>
-    <div><%=total%></div>
-    <div><%=images%></div>
+    <div>
+		<%for(var i = 1; i<=total;i++){%>
+			<a href="/<%=i%>"><%=i%></a>
+		<%}%>
+	</div>
+	<div>
+		
+		<% if(images!= undefined){
+		 for(var img of images){
+		%>
+			<a target="_blank" href="<%=img.url%>"><img src="<%=img.url%>" alt=""></a>
+		<%}}%>
+		<!-- <%=images[0].url%> -->
+	</div>
 </body>
 </html>
